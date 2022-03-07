@@ -176,7 +176,7 @@ public class CheckoutController extends HttpServlet {
         }
 
         doCancel(request, response);
-        request.setAttribute("SUCCESS", "Your order has been successfully");
+        request.setAttribute("SUCCESS", "Your order has been successfully. Please check your email!");
 
         new Thread(new Runnable() {
             @Override
