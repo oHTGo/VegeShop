@@ -6,7 +6,18 @@
     </head>
     <body>
         <c:import url="component/header.jspf"/>
-        <div class="container d-flex flex-column align-items-center">
+        <div class="container bg-light rounded-3">
+            <form class="d-flex m-4 p-3" action="HomeController">
+                <input class="form-control me-2"
+                       type="search"
+                       placeholder="Search"
+                       aria-label="Search"
+                       name="search"
+                       value="${param.search}">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+        <div class="container d-flex flex-column align-items-center pb-4">
             <c:set var="count" scope="request" value="0"/>
             <c:set var="itemsPerRow" scope="request" value="4"/>
             <c:forEach items="${requestScope.PRODUCTS}" var="product">

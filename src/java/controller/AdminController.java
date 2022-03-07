@@ -113,7 +113,7 @@ public class AdminController extends HttpServlet {
         request.setAttribute("CATEGORIES", categories);
 
         ProductDAO productDAO = new ProductDAO();
-        List<ProductDTO> products = productDAO.getAll();
+        List<ProductDTO> products = productDAO.getAllSearch("");
         request.setAttribute("PRODUCTS", products);
     }
 

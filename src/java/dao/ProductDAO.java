@@ -15,13 +15,13 @@ public class ProductDAO {
 
     private final Logger LOGGER = Logger.getLogger(ProductDAO.class.getName());
 
-    private static final String GET_ALL = "SELECT productID, productName, image, quantity, price, tblProducts.categoryID, categoryName FROM tblProducts INNER JOIN tblCategories ON tblProducts.categoryID = tblCategories.categoryID WHERE tblProducts.isActive = 1;";
+    private static final String GET_ALL_SEARCH = "SELECT productID, productName, image, quantity, price, tblProducts.categoryID, categoryName FROM tblProducts INNER JOIN tblCategories ON tblProducts.categoryID = tblCategories.categoryID WHERE tblProducts.isActive = 1 AND productName LIKE ?;";
     private static final String CREATE = "INSERT INTO tblProducts (productID, productName, image, quantity, price, categoryID) VALUES (?, ?, ?, ?, ?, ?);";
     private static final String GET = "SELECT productID, productName, image, quantity, price, tblProducts.categoryID, categoryName FROM tblProducts INNER JOIN tblCategories ON tblProducts.categoryID = tblCategories.categoryID WHERE tblProducts.productID = ? AND tblProducts.isActive = 1;";
     private static final String UPDATE = "UPDATE tblProducts SET productName = ?, image = ?, quantity = ?, price = ?, categoryID = ? WHERE productID = ?;";
     private static final String REMOVE = "UPDATE tblProducts SET isActive = 0 WHERE productID = ?;";
 
-    public List<ProductDTO> getAll() throws SQLException {
+    public List<ProductDTO> getAllSearch(String search) throws SQLException {
         List<ProductDTO> products = new ArrayList<>();
         Connection conn = null;
         PreparedStatement ptm = null;
@@ -30,7 +30,8 @@ public class ProductDAO {
         try {
             conn = DBUtils.getConnection();
             if (conn != null) {
-                ptm = conn.prepareStatement(GET_ALL);
+                ptm = conn.prepareStatement(GET_ALL_SEARCH);
+                ptm.setString(1, "%" + search + "%");
                 rs = ptm.executeQuery();
 
                 while (rs.next()) {

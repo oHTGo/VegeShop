@@ -80,7 +80,11 @@ public class HomeController extends HttpServlet {
 
     private void doView(HttpServletRequest request, HttpServletResponse response) throws SQLException {
         ProductDAO dao = new ProductDAO();
-        List<ProductDTO> products = dao.getAll();
+        String search = request.getParameter("search");
+        if (search == null) {
+            search = "";
+        }
+        List<ProductDTO> products = dao.getAllSearch(search);
         request.setAttribute("PRODUCTS", products);
 
         HttpSession session = request.getSession();

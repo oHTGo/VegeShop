@@ -106,7 +106,7 @@ public class CheckoutController extends HttpServlet {
 
     private void doView(HttpServletRequest request, HttpServletResponse response) throws SQLException {
         ProductDAO productDAO = new ProductDAO();
-        List<ProductDTO> products = productDAO.getAll();
+        List<ProductDTO> products = productDAO.getAllSearch("");
 
         HttpSession session = request.getSession();
         CartDTO cart = (CartDTO) session.getAttribute("CART");
