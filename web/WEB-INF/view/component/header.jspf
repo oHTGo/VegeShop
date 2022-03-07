@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="${baseURL}">VegeShop</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active"
+                       aria-current="page"
+                       href="${baseURL}">Home</a>
+                </li>
+                <c:if test="${sessionScope.CURRENT_USER.getRole() == 1}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="AdminController">Admin</a>
+                    </li>
+                </c:if>
+                <c:if test="${sessionScope.CURRENT_USER.getRole() == 0}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="UserController">User</a>
+                    </li>
+                </c:if>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <c:if test="${router.contains('HomeController')}">
+                        <c:choose>
+                            <c:when test="${sessionScope.CURRENT_USER.getRole() == 1}">
+                            </c:when>
+                            <c:otherwise>
+                                <button type="button" class="nav-item btn btn-dark me-2" data-bs-toggle="modal" data-bs-target="#CART">
+                                    <i class="bi bi-bag-heart text-light"></i>
+                                </button>
+                            </c:otherwise>
+                        </c:choose>
+                    </c:if>
+                    <c:choose>
+                        <c:when test = "${sessionScope.CURRENT_USER != null}">
+                            <li class="nav-item">
+                                <div class="nav-link active">Welcome ${sessionScope.CURRENT_USER.getFullName()}</div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="LogoutController">Logout</a>
+                            </li>
+                        </c:when>
+
+                        <c:otherwise>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="LoginController">Login</a>
+                            </li>
+                        </c:otherwise>
+                    </c:choose>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
