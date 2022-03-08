@@ -3,6 +3,7 @@
     <head>
         <title>VeShop - Checkout</title>
         <c:import url="component/head.jspf"/>
+        <script src="https://www.google.com/recaptcha/api.js?hl=en" async defer></script>
     </head>
     <body>
         <c:import url="component/header.jspf"/>
@@ -11,6 +12,11 @@
             <c:if test="${requestScope.PRODUCT_ERROR != null}">
                 <div class="alert alert-warning" role="alert">
                     ${requestScope.PRODUCT_ERROR}
+                </div>
+            </c:if>
+            <c:if test="${requestScope.ORDER_ERROR != null}">
+                <div class="alert alert-danger" role="alert">
+                    ${requestScope.ORDER_ERROR}
                 </div>
             </c:if>
             <c:if test="${requestScope.SUCCESS != null}">
@@ -62,7 +68,7 @@
                     <div class="modal fade" id="OrderModal" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
-                                <form action="CheckoutController" method="POST">
+                                <form action="CheckoutController" method="POST" id="OrderForm">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">Order</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -103,12 +109,17 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit"
-                                                class="btn btn-success"
-                                                name="action"
-                                                value="Order"
-                                                >Confirm</button>
+                                        <div class="d-flex">
+                                            <div class="g-recaptcha" data-sitekey="6Lf9KMEeAAAAAJsU04MyAc3h79Yokp0ZOgf0VwR-"></div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit"
+                                                    class="btn btn-success"
+                                                    name="action"
+                                                    value="Order"
+                                                    >Confirm</button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -127,6 +138,11 @@
                 </c:otherwise>
             </c:choose>
         </div>
+        <script>
+            function onSubmit(token) {
+                document.getElementById("OrderForm").submit();
+            }
+        </script>
         <c:import url="component/scripts.jspf"/>
     </body>
 </html>

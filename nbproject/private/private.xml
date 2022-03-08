@@ -2,42 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/filters/EncodingFilter.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/WEB-INF/view/component/head.jspf</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dto/CategoryDTO.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/WEB-INF/view/checkout.jsp</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/controller/AuthController.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/utils/FormatterUtils.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/controller/HomeController.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/utils/ServletUtils.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/controller/AdminController.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/controller/CheckoutController.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/controller/LoginController.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/controller/RegisterController.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/WEB-INF/view/user.jsp</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/utils/DBUtils.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/WEB-INF/view/home.jsp</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/WEB-INF/view/admin.jsp</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/index.jsp</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dao/OrderDAO.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dao/CategoryDAO.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/WEB-INF/view/login.jsp</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/controller/UserController.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dao/OrderDetailDAO.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/controller/LogoutController.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dto/OrderDTO.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/WEB-INF/view/register.jsp</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dto/OrderDetailDTO.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dao/UserDAO.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/utils/EmailSenderUtils.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dao/ProductDAO.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/WEB-INF/view/component/scripts.jspf</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/WEB-INF/view/component/header.jspf</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/web/WEB-INF/view/component/base.jspf</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dto/CartDTO.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dto/ProductDTO.java</file>
-            <file>file:/C:/Users/HTG/Desktop/FPT/JavaWeb/VegeShop/src/java/dto/UserDTO.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

@@ -23,6 +23,7 @@ import org.apache.commons.lang3.tuple.ImmutableTriple;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import utils.EmailSenderUtils;
+import utils.RecaptchaUtils;
 import utils.ServletUtils;
 
 public class CheckoutController extends HttpServlet {
@@ -147,6 +148,12 @@ public class CheckoutController extends HttpServlet {
 
         HashMap<ProductDTO, Integer> productsInCart = cart.getProducts();
         if (productsInCart.isEmpty()) {
+            return;
+        }
+        
+        String token = request.getParameter("g-recaptcha-response");
+        if (!RecaptchaUtils.checkToken(token)) {
+            request.setAttribute("ORDER_ERROR", "Invalid recaptcha");
             return;
         }
 
