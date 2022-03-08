@@ -178,11 +178,8 @@ public class CheckoutController extends HttpServlet {
         doCancel(request, response);
         request.setAttribute("SUCCESS", "Your order has been successfully. Please check your email!");
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                EmailSenderUtils.send(email, order);
-            }
+        new Thread(() -> {
+            EmailSenderUtils.send(email, order);
         }).start();
     }
 }

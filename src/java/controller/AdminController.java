@@ -124,7 +124,6 @@ public class AdminController extends HttpServlet {
         CategoryDAO dao = new CategoryDAO();
         if (!dao.create(categoryID, categoryName)) {
             request.setAttribute("CATEGORY_ERROR", "Add failed");
-            return;
         }
     }
 
@@ -135,7 +134,6 @@ public class AdminController extends HttpServlet {
         CategoryDAO dao = new CategoryDAO();
         if (!dao.update(categoryID, categoryName)) {
             request.setAttribute("CATEGORY_ERROR", "Update failed");
-            return;
         }
     }
 
