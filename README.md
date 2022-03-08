@@ -26,6 +26,6 @@
 - I built this application with Netbean 8.2 so maybe you can use Netbean IDE to make it more easily to import project.
 - If you use other IDE such as Eclipse or Intellij IDEA, you will need to find the way to config this project before use.
 - After import this project to IDE, adding JSTL support (almost all IDE support adding JSTL lib) and all external library in `lib`.
-- Then, you change some information in `DBUtils` and `EmailSenderUtils`.
+- Then, copy the file `EnvConfig.java.sample` to `EnvConfig.java` and you change some information in `EnvConfig.java`.
 - Finally, setup database with my `database.sql` scripts.
 - That's all, enjoy VegeShop!.
