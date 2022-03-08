@@ -1,0 +1,30 @@
+package configurations;
+
+public class EnvConfig {
+    private static final String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=VegeShop";
+    private static final String DB_USERNAME = "sa";
+    private static final String DB_PASSWORD = "";
+    
+    private static final String EMAIL_USERNAME = "";
+    private static final String EMAIL_PASSWORD = "";
+
+    public static String getDB_URL() {
+        return DB_URL;
+    }
+
+    public static String getDB_USERNAME() {
+        return DB_USERNAME;
+    }
+
+    public static String getDB_PASSWORD() {
+        return DB_PASSWORD;
+    }
+
+    public static String getEMAIL_USERNAME() {
+        return EMAIL_USERNAME;
+    }
+
+    public static String getEMAIL_PASSWORD() {
+        return EMAIL_PASSWORD;
+    }
+}

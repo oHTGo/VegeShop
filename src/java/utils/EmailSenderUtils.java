@@ -1,5 +1,6 @@
 package utils;
 
+import configurations.EnvConfig;
 import dto.OrderDTO;
 import java.util.Properties;
 import javax.mail.*;
@@ -8,8 +9,8 @@ import javax.mail.internet.MimeMessage;
 
 public class EmailSenderUtils {
 
-    private static final String USERNAME = "huynnse150807@fpt.edu.vn";
-    private static final String PASSWORD = "";
+    private static final String USERNAME = EnvConfig.getEMAIL_USERNAME();
+    private static final String PASSWORD = EnvConfig.getEMAIL_PASSWORD();
 
     public static boolean send(String email, OrderDTO order) {
         try {
