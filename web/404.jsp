@@ -7,7 +7,7 @@
     </head>
     <body>
         <script>
-            <c:redirect url="HomeController"></c:redirect>
+            window.location.replace(window.location.origin + "/${baseURL}");
         </script>
     </body>
 </html>
